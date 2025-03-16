@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nard Portofolio's</title>
+    <link href="https://db.onlinewebfonts.com/c/a38555804658a66ab17450e62b7ed6a4?family=Standup+W01+Caps+Regular" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            font-family: Arial, sans-serif;
+            font-weight: 80;
+            font-size: small;
+            margin: 0;
+            padding: 0;
+            background-color: #000; 
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.4rem 7%;
+            background-color: rgba(1, 1, 1, 0.8);
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul a {
+            margin: 0px 80px;
+            text-decoration: none;
+            color: rgb(148, 148, 148); 
+            transition: transform 0.2s ease, color 0.2s ease; 
+        }
+
+        nav ul a.active {
+            color: white;
+        }
+
+        nav ul a:active {
+            transform: scale(2.5); 
+            color: #ffffff; 
+        }
+
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            opacity: 0; 
+            transform: translateY(50px); 
+            transition: opacity 3.5s ease, transform 3.5s ease; 
+        }
+
+        section.visible {
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+
+        section.hidden {
+            opacity: 0; 
+            transform: translateY(50px);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: -100px;
+        }
+
+        h2 {
+            font-weight: 300;
+            font-family: '19-PRA', sans-serif;
+            margin-bottom: -10px;
+        }
+
+        p {
+            font-family: 'Standup W01 Caps Regular', sans-serif;
+        }
+
+        #V, #X {
+            background: linear-gradient(135deg, #3d3d3d, #020202);
+        }
+
+        #VI {
+            background: #333;
+        }
+
+        #VII {
+            background: #333;
+        }
+
+        .background {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            opacity: 0.2;
+            filter: blur(10px);
+        }
+
+        .anim-masuk {
+            font-size: 24px;
+            opacity: 0;
+            transform: scale(0.2);
+            animation: masuk 8s ease-out forwards;
+        }
+
+        @keyframes masuk {
+            0% {
+                opacity: 0;
+                transform: scale(0.6);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(0.7);
+            }
+        }
+
+
+        #copyright {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            color: rgba(148, 148, 148, 0.7);
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            z-index: 9999;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .contact-form label {
+            font-size: 14px;
+            color: #fff;
+            display: block;
+            margin-bottom: 5px;
+            font-family: '19-PRA', sans-serif;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: #6c63ff;
+        }
+
+        .contact-form button {
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #333333;
+        }
+        
+        @media (max-width: 768px) {
+        html {
+            font-size: 55%;
+        }
+
+        header {
+        background: none; 
+        position: fixed;
+        left: -90px;
+        top: 50%;
+        transform: translateY(-50%); 
+        width: 200px; 
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        }
+
+        nav ul {
+            flex-direction: column; 
+            align-items: flex-start; 
+            padding-left: 10px; 
+        }
+
+        nav ul a {
+            color: rgba(255, 255, 255, 0.267);
+            font-size: 12px; 
+            margin: 2px 0; 
+            padding: 10px 0;
+            display: block;
+        }
+        }
+
+        
+        
+
+        @font-face {
+            font-family: '19-PRA';
+            src: url(fonts/19-PRA\ Medium.otf) format('opentype');
+        }
+
+        @import url(https://db.onlinewebfonts.com/c/a38555804658a66ab17450e62b7ed6a4?family=Standup+W01+Caps+Regular);
+
+        @font-face {
+            font-family: "Standup W01 Caps Regular";
+            src: url("https://db.onlinewebfonts.com/t/a38555804658a66ab17450e62b7ed6a4.eot");
+            src: url("https://db.onlinewebfonts.com/t/a38555804658a66ab17450e62b7ed6a4.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/a38555804658a66ab17450e62b7ed6a4.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/a38555804658a66ab17450e62b7ed6a4.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/a38555804658a66ab17450e62b7ed6a4.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/a38555804658a66ab17450e62b7ed6a4.svg#Standup W01 Caps Regular")format("svg");
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#V">V</a></li>
+                <li><a href="#VI">VI</a></li>
+                <li><a href="#VII">VII</a></li>
+                <li><a href="#VIII">VIII</a></li>
+                <li><a href="#IX">IX</a></li>
+                <li><a href="#X">X</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="V" class="visible">
+        <img src="{{ url_for('static', filename='img/sec1bg.jfif') }}" class="background" alt="bg1">
+        <div class="container">
+            <h1 style="justify-content: center;">Hi, There..</h1>
+        </div>
+    </section>
+
+    <section id="VI">
+        <img src="{{ url_for('static', filename='img/sec2bg.jfif') }}" class="background" alt="bg2">
+        <div class="container">
+            <h2 class="anim-masuk">WHO AM I?</h2>
+            <p class="anim-masuk">My name is Kennard, I'm a 16 years old from Jakarta and <br> studying programming.</p>
+        </div>
+    </section>
+
+    <section id="VII">
+        <img src="{{ url_for('static', filename='img/sec3bg.jfif') }}" class="background" alt="bg3">
+        <div class="container">
+            <h2 class="anim-masuk">INTEREST</h2>
+            <p class="anim-masuk">I have a lot interest to learn about programming, I have learn <br> programming language like Python, C++, Javascript and MySql.</p>
+        </div>
+    </section>
+    
+    <section id="VIII">
+        <img src="{{ url_for('static', filename='img/sec4bg.jfif') }}" class="background" alt="bg4">
+        <div class="container">
+            <h2 class="anim-masuk">PROJECT & EXPERIENCE</h2>
+            <p class="anim-masuk">Most important things about studying programming <br> is a project, i put the project on my <a href="https://github.com/Kennard17" style="color: white;">Github repositories</a> and <a href="https://medium.com/@kennard.budiman17" style="color: white;">Medium.</a></p>
+        </div>
+    </section>
+
+    <section id="IX">
+        <img src="{{ url_for('static', filename='img/sec5bg.jfif') }}" class="background" alt="bg5">
+        <div class="container">
+            <h2 class="anim-masuk">THE BELIEF</h2>
+            <p class="anim-masuk">There is difference between "KNOWING" <br> the path and "WALKING" the path. <br> <br> - Morpheus, "The Matrix"</p>
+        </div>
+    </section>
+
+    <section id="X">
+        <div class="container">
+            <h1 style="font-size: 50px; text-align: center;">Contact Me</h1>
+    
+            <form action="/contact" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>    
+    </section>
+
+    <div id="copyright">© 2025 Nard. All Rights Reserved</div>
+
+    <script>
+        let currentSectionIndex = 0;
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav ul a');
+
+        function scrollToSection(index) {
+            if (index >= 0 && index < sections.length) {
+                sections[currentSectionIndex].classList.remove('visible');
+                sections[currentSectionIndex].classList.add('hidden');
+
+                currentSectionIndex = index;
+
+                sections[currentSectionIndex].classList.remove('hidden');
+                sections[currentSectionIndex].classList.add('visible');
+
+                sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+
+                navLinks.forEach((link, idx) => {
+                    link.classList.remove('active');
+                    if (idx === currentSectionIndex) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        navLinks.forEach((link, index) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); 
+                scrollToSection(index);
+            });
+        });
+
+        window.addEventListener('wheel', (event) => {
+            if (event.deltaY > 0) {
+                scrollToSection(currentSectionIndex + 1);
+            } else {
+                scrollToSection(currentSectionIndex - 1);
+            }
+            event.preventDefault();
+        });
+
+        window.addEventListener('load', () => {
+            scrollToSection(currentSectionIndex);
+        });
+
+        
+
+    </script>
+</body>
+</html>
